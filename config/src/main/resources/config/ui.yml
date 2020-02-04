@@ -10,15 +10,3 @@ ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 20000
 
-zuul:
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 60000
-
-  routes:
-    authservice:
-      path: /swagger/**
-      # 示例curl -X POST -d username=admin -d password=admin http://localhost:80/user/user/login
-      #    curl -X POST -d username=admin -d password=admin http://localhost:80/authservice/user/login
-      serviceId: authservice
-      sensitiveHeaders:
